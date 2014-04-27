@@ -41,15 +41,15 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         var client = new Apigee.Client({
-            orgName:"YOUR APIGEE.COM USERNAME",
-            appName:"sandbox",
+            orgName:"demo40",//YOUR APIGEE.COM USERNAME
+            appName:"CLUBTEST",//sandbox
             logging:true
         });
         var pushNotification = window.plugins.pushNotification;
         pushNotification.registerDevice({alert:true, badge:true, sound:true}, function(status) {
             if(status.deviceToken) {
                 var options = {
-                    notifier:"YOUR NOTIFIER",
+                    notifier:"UK Sites",//YOUR NOTIFIER
                     deviceToken:status.deviceToken
                 };
                 
